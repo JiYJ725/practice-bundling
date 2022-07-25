@@ -1,0 +1,437 @@
+/* TODO: 보기 좋은 나만의 아고라 스테이츠를 위해서 CSS를 수정하세요. */
+/* 1-1. 모든 요소 border-box */
+
+body {
+    margin: 0;
+    box-sizing: boder-box;
+    display: flex;
+    justify-content: center;
+    background-color: #1B262C;
+}
+
+
+h1 {
+    text-align: center;
+    color: whitesmoke;
+}
+
+.form__container {
+    background-color: #0F4C75;
+    width: 540px;
+    padding: 25px;
+    border: 0;
+    outline: 0;
+    border-radius: 10px;
+    position: sticky;
+    top: 0px;
+}
+
+.form__submit {
+    align-self: stretch;
+    display: flex;
+
+}
+
+
+.form {
+    display: flex;
+    justify-content: space-between;
+}
+
+.form__textbox {
+    display: flex;
+    flex-direction: column;
+}
+
+.form__input--wrapper {
+    width: 450px;
+}
+
+.form__input--name {
+    display: flex;
+    justify-content: space-between;
+    margin: 0px 0px 3px 0px;
+}
+
+.form__input--title {
+    display: flex;
+    justify-content: space-between;
+    margin: 0px 0px 3px 0px;
+}
+
+#name {
+    width: 300px;
+}
+
+
+.discussions__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: scroll;
+    width: 580px;
+    height: 50vh;
+    background-color: #1B262C;
+}
+
+.discussions__container::-webkit-scrollbar {
+    width: 10px;
+}
+
+.discussions__container::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 0.23);
+    ;
+    border-radius: 10px;
+    background-clip: padding-box;
+    border: 2px solid transparent;
+}
+
+.discussions__container::-webkit-scrollbar-track {
+    background-color: #1B262C;
+    border-radius: 10px;
+    box-shadow: inset 0px 0px 5px rgba(255, 255, 255, 0.432);
+}
+
+/* 1-3. Discussion컴포넌트 전체 폭 540px */
+.discussion__container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 540px;
+    height: 120px;
+    border-radius: 10px;
+    border: 0;
+    outline: 0;
+    margin: 0.5em 0px;
+    transition: all 0.2s;
+}
+
+.discussion__container:hover {
+    transform: scale(1.05)
+}
+
+.discussion__avatar--wrapper {
+    margin: 0px 10px 0px 10px;
+}
+
+.form__input--wrapper {
+    color: white
+}
+
+/* 1-2. li 점 보이지 않게 함 */
+li {
+    list-style: none;
+}
+
+ul {
+    padding: 0;
+}
+
+p {
+    font-size: 30px;
+}
+
+a:link {
+    color: #0F4C75;
+    ;
+}
+
+a:visited {
+    color: #BBE1FA;
+}
+
+a:hover {
+    color: rgb(27, 38, 44);
+}
+
+
+.submit:hover {
+    box-shadow: 0 80px 0 0 rgba(0, 0, 0, 0.25) inset,
+        0 -80px 0 0 rgba(0, 0, 0, 0.25) inset;
+
+}
+
+/* 아바타 공간 */
+.discussion__avatar--wrapper {
+    display: flex;
+}
+
+/* 2-1 아바타 동그랗게, 2-2 아바타 48px / 2-2 아바타 Discussion컴포넌트 높이의 중간 */
+.discussion__avatar--image {
+    border-radius: 50%;
+    width: 48px;
+    align-self: center;
+}
+
+/* 개별 discussion */
+.discussion__container {
+    color: #0F4C75;
+    background-color: white;
+}
+
+/* 3-1 Discussion제목, 저자, 생성일 간격 충분히 주기 */
+.discussion__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-basis: 470px;
+}
+
+.discussion__title {
+    font-size: 20px;
+    margin-block-start: 0.8em;
+    margin-block-end: 0.6em;
+}
+
+.discussion__answered {
+    margin: 0px 5px 0px 0px;
+}
+
+/* 3-2 저자, 생성일 오른쪽 정렬 */
+.discussion__information {
+    align-self: flex-end;
+    margin: 0px 0px 10px 0px;
+}
+
+.discussion__answered {
+    align-self: center;
+}
+
+
+
+/* submit 버튼 효과 */
+.submit {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    color: #fff;
+    font-size: 16px;
+    line-height: 45px;
+    margin-right: 0px;
+    max-width: 100px;
+    text-decoration: none;
+    text-transform: uppercase;
+    vertical-align: middle;
+    background-color: #0F4C75;
+    align-self: stretch;
+}
+
+
+.submit {
+    border: 0 solid;
+    box-shadow: inset 0 0 20px rgba(255, 255, 255, 0);
+    outline: 1px solid rgba(255, 255, 255, 0.5);
+    -webkit-transition: all 1.25s cubic-bezier(0.19, 1, 0.22, 1);
+    transition: all 1.25s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.submit:hover {
+    border: 1px solid;
+    box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.5), 0 0 20px rgba(255, 255, 255, 0.2);
+    outline-color: rgba(255, 255, 255, 0);
+    outline-offset: 15px;
+    text-shadow: 1px 1px 2px #427388;
+}
+
+
+/* 페이지네이션 */
+
+.article {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 2rem;
+    text-align: center;
+}
+
+.content {
+    display: flex;
+    padding: 0.3em 0;
+    list-style: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+    overflow-y: scroll;
+    height: 50vh;
+}
+
+.content__id,
+.content__author,
+.content__date {
+    flex-basis: 15%;
+}
+
+.content__title {
+    flex: 1;
+    text-align: left;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.buttons {
+    position: relative;
+    padding: 1rem 0;
+    display: inline-flex;
+    justify-content: center;
+}
+
+.button {
+    padding: 0 1rem;
+    font-size: 1.2rem;
+    color: rgb(255, 255, 255);
+    background: transparent;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+}
+
+.button.active,
+.button:hover {
+    color: #5F85DB;
+    font-weight: 600;
+    text-decoration: underline;
+}
+
+.prev {
+    position: absolute;
+    left: -2.5rem;
+}
+
+.next {
+    position: absolute;
+    right: -2.5rem;
+}
+
+ion-icon {
+    padding-top: 0.05rem;
+}
+
+
+/* 토글 버튼 */
+.main {
+    position: relative;
+}
+
+.convertText {
+    position: absolute;
+    color: White;
+    top: 0;
+    right: 0;
+    margin: 3.5em 6em;
+}
+
+.switch-button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 3em 2em;
+    display: inline-block;
+    width: 55px;
+    height: 30px;
+}
+
+.switch-button input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.onoff-switch {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 20px;
+    background-color: #ccc;
+    box-shadow: inset 1px 5px 1px #999;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.onoff-switch:before {
+    position: absolute;
+    content: "";
+    height: 22px;
+    width: 22px;
+    left: 4px;
+    bottom: 4px;
+    background-color: #fff;
+    -webkit-transition: .5s;
+    transition: .4s;
+    border-radius: 20px;
+}
+
+.switch-button input:checked+.onoff-switch {
+    background-color: #5F85DB;
+    box-shadow: inset 1px 5px 1px #5F85DB;
+}
+
+.switch-button input:checked+.onoff-switch:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+/* 음성인식버튼 */
+
+.soundFunc {
+    position: absolute;
+    color: White;
+    top: 0;
+    right: 0;
+    margin: 1em 6em;
+}
+
+.sound-button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0.5em 2em;
+    display: inline-block;
+    width: 55px;
+    height: 30px;
+}
+
+.sound-button input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.sound-switch {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 20px;
+    background-color: #ccc;
+    box-shadow: inset 1px 5px 1px #999;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.sound-switch:before {
+    position: absolute;
+    content: "";
+    height: 22px;
+    width: 22px;
+    left: 4px;
+    bottom: 4px;
+    background-color: #fff;
+    -webkit-transition: .5s;
+    transition: .4s;
+    border-radius: 20px;
+}
+
+.sound-button input:checked+.sound-switch {
+    background-color: #5F85DB;
+    box-shadow: inset 1px 5px 1px #5F85DB;
+}
+
+.sound-button input:checked+.sound-switch:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
