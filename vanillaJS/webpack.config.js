@@ -2,10 +2,15 @@ const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
+  mode: "production",
   entry: "./src/index.js",
+  devServer: {
+    static: "./docs",
+  },
   output: {
     path: path.resolve(__dirname, "docs"), // './dist'의 절대 경로를 리턴합니다.
-    filename: "app.bundle.js",
+    filename: "[name].bundle.js",
+    clean: true,
   },
   module: {
     rules: [
